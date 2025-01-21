@@ -1,4 +1,4 @@
-import { ChangeEvent, useReducer, useState } from 'react';
+import { ChangeEvent, useReducer } from 'react';
 
 // type ReducerActionAlt = {
 //   type: string;
@@ -49,7 +49,7 @@ interface IState {
 
 const initialState: IState = { count: 0, step: 1 };
 
-function reducer(state: IState, action: ReducerAction) {
+function reducer(state: IState, action: ReducerAction): IState {
   switch (action.type) {
     case 'dec':
       return { ...state, count: state.count - state.step };
